@@ -1,24 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import UserContextProvider from './Context/UserContextProvider'; 
+import Profile from './Component/Profile';
+import Login from './Component/Login';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextProvider>
+        <h1>Context Api Practise</h1>
+    <Login />
+    <Profile />
+    </UserContextProvider>
   );
 }
 
